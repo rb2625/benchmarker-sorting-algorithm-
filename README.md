@@ -60,18 +60,44 @@ g++ -O0 -o sorting_benchmark main.cpp
 You can generate the three input files with a quick Python script:
 
 ```python
-import random
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
 
-nums = random.sample(range(1, 200001), 100000)
+using namespace std;
 
-with open("random.txt", "w") as f:
-    f.write("\n".join(map(str, nums)))
+int main() {
+    const int SIZE = 100000;
+    int nums[SIZE];
 
-with open("ascending.txt", "w") as f:
-    f.write("\n".join(map(str, sorted(nums))))
+    srand(time(0));
+    for (int i = 0; i < SIZE; i++)
+        nums[i] = rand() % 200000 + 1;
 
-with open("descending.txt", "w") as f:
-    f.write("\n".join(map(str, sorted(nums, reverse=True))))
+    // random.txt
+    ofstream randFile("random.txt");
+    for (int i = 0; i < SIZE; i++)
+        randFile << nums[i] << "\n";
+    randFile.close();
+
+    // ascending.txt
+    sort(nums, nums + SIZE);
+    ofstream ascFile("ascending.txt");
+    for (int i = 0; i < SIZE; i++)
+        ascFile << nums[i] << "\n";
+    ascFile.close();
+
+    // descending.txt
+    ofstream descFile("descending.txt");
+    for (int i = SIZE - 1; i >= 0; i--)
+        descFile << nums[i] << "\n";
+    descFile.close();
+
+    cout << "Files generated successfully!\n";
+    return 0;
+}
 ```
 
 ### 3. Run
