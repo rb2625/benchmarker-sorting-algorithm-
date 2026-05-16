@@ -57,9 +57,9 @@ g++ -O0 -o sorting_benchmark main.cpp
 
 ### 2. Generate Input Files (if you don't have them)
 
-You can generate the three input files with a quick Python script:
+You can generate the three input files with a quick c++ script:
 
-```python
+```c++
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
