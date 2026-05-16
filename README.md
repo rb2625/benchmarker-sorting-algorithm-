@@ -2,7 +2,7 @@
 
 A C++ benchmarking program that implements and compares **5 classic sorting algorithms** — each with two versions (V1 baseline and V2 optimized) — across three different input scenarios: random, ascending, and descending arrays of 100,000 integers.
 
-Built as a group project for CSCI 215 (Data Structures and Algorithms).
+Built as a project for CSCI 215 (Data Structures and Algorithms).
 
 ---
 
