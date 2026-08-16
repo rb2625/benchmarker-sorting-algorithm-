@@ -1,6 +1,6 @@
 # Sorting Algorithm Benchmarker
 
-A C++ benchmarking program that implements and compares **5 classic sorting algorithms** — each with two versions (V1 baseline and V2 optimized) — across three different input scenarios: random, ascending, and descending arrays of 100,000 integers.
+A C++ benchmarking program that implements and compares **5 classic sorting algorithms**  each with two versions (V1 baseline and V2 optimized)  across three different input scenarios: random, ascending, and descending arrays of 100,000 integers.
 
 Built as a project for CSCI 215 (Data Structures and Algorithms).
 
@@ -128,8 +128,8 @@ QuickSort V2 Ascending:   0.013201 seconds
 
 - **Merge Sort and Quick Sort V2** are consistently the fastest across all scenarios (~O(n log n))
 - **Bubble Sort and Insertion Sort** are slow on random data but Insertion Sort V2 is near-instant on already-sorted ascending input
-- **Quick Sort V1** crashes on sorted input due to stack overflow — V2 (middle pivot) fixes this
-- **Selection Sort** has no meaningful best case — it always does O(n²) comparisons regardless of input order
+- **Quick Sort V1** crashes on sorted input due to stack overflow  V2 (middle pivot) fixes this
+- **Selection Sort** has no meaningful best case  it always does O(n²) comparisons regardless of input order
 
 ---
 
